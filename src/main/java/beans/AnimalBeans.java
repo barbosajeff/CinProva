@@ -4,11 +4,14 @@
  */
 package beans;
 
+import br.com.Cin.ControleEntidades.ReclamacaoAnimalJpaController;
 import br.com.Cin.Entidades.ReclamacaoAnimal;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Named;
 import javax.enterprise.context.Dependent;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 
 /**
  *
@@ -22,6 +25,9 @@ public class AnimalBeans {
      * Creates a new instance of AnimalBeans
      */
     
+    private EntityManagerFactory factory;
+    private EntityManager em;
+    private ReclamacaoAnimalJpaController recJPa; 
     private ReclamacaoAnimal recAnimal;
     private  String pesquisar;
     private List listaRecAniList = new ArrayList<>(); 
@@ -35,6 +41,9 @@ public class AnimalBeans {
     
     
     public  void Salvar(ReclamacaoAnimal rec){
+        
+        recJPa = new ReclamacaoAnimalJpaController(factory);
+        recJPa.create(recAnimal);
         
     }
 
