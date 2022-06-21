@@ -12,36 +12,53 @@
 
                 <h2> Reclamação</h2> 
                 Descrição
-                <h:inputText id="txtNome" size="80" value=""/>
+                <h:inputText id="txtNome" size="80" value="#{animalBeans.recAnimal.descricao}"/>
                 Observação
-                <h:inputText id="txtNome" size="80" value=""/>
+                <h:inputText id="txtNome" size="80" value="#{animalBeans.recAnimal.observacao}"/>
                 
                 <h2> Reclamante</h2>  
                 Nome 
-                <h:inputText id="txtNome" size="80" value=""/>
+                <h:inputText id="txtNome" size="80" value="#{animalBeans.recAnimal.reclamante.nomeCompleto}"/>
                 E-mail
-                   <h:inputText id="txtEMail" size="50"  value=""/>
+                <h:inputText id="txtEMail" size="50"  value="#{animalBeans.recAnimal.reclamante.geteMail}"/>
                 telefone   
-                 <h:inputText id="txttelefone" size="50"  value=""/>
+                <h:inputText id="txttelefone" size="50"  value="#{animalBeans.recAnimal.reclamante.telefone}"/>
                 <h3> Endereço</h3>
                    Logradouro
-                   <h:inputSecret id="txtLogradouro" size="15" value="" />
+                   <h:inputSecret id="txtLogradouro" size="15" value="#{animalBeans.recAnimal.reclamante.endereco.logradouro}" />
 
                    Bairro
-                   <h:inputSecret id="txtBairro" size="15" value="" />
+                   <h:inputSecret id="txtBairro" size="15" value="#{animalBeans.recAnimal.reclamante.endereco.bairro}" />
                    
                    Número
-                 <h:inputSecret id="txtNumero" size="15" value="" />
+                   <h:inputSecret id="txtNumero" size="15" value="#{animalBeans.recAnimal.reclamante.endereco.numero}" />
                   CEP
-                 <h:inputSecret id="txtCEP" size="15" value="" />
+                  <h:inputSecret id="txtCEP" size="15" value="#{animalBeans.recAnimal.reclamante.endereco.cep}" />
                   Complemento
-                 <h:inputSecret id="txtCompleneto" size="15" value="" />
+                  <h:inputSecret id="txtCompleneto" size="15" value="#{animalBeans.recAnimal.reclamante.endereco.complemento}" />
                  
                  <h2> Dados do Animal</h2>   
                  
+                 Animal 
+                 <h:inputSecret id="animal" size="55" value="#{animalBeans.recAnimal.animal}" />
+                 Data 
+                 <h:inputSecret id="data" size="55" value="#{animalBeans.recAnimal.dataIncidente}" />
                  
+                <h3> Local do Incidente</h3>
+                   Logradouro
+                   <h:inputSecret id="Logradouro" size="15" value="#{animalBeans.recAnimal.localIncidente.logradouro}" />
 
-               <h:commandButton value="Salvar"/>
+                   Bairro
+                   <h:inputSecret id="Bairro" size="15" value="#{animalBeans.recAnimal.localIncidente.bairro}" />
+                   
+                   Número
+                   <h:inputSecret id="Numero" size="15" value="#{animalBeans.recAnimal.localIncidente.numero}" />
+                  CEP
+                  <h:inputSecret id="CEP" size="15" value="#{animalBeans.recAnimal.localIncidente.cep}" />
+                  Complemento
+                  <h:inputSecret id="Compleneto" size="15" value="#{animalBeans.recAnimal.localIncidente.complemento}" />
+
+                  <h:commandButton value="#{animalBeans.Salvar(rec)}"/>
 
         
     </ui:define>
