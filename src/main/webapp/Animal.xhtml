@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./TemplateCin.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="content">
+      
+        
+            <h1> Cadastro ReclamaÇão Animais  </h1>
+
+                <h2> Reclamação</h2> 
+                Descrição
+                <h:inputText id="txtNome" size="80" value=""/>
+                Observação
+                <h:inputText id="txtNome" size="80" value=""/>
+                
+                <h2> Reclamante</h2>  
+                Nome 
+                <h:inputText id="txtNome" size="80" value=""/>
+                E-mail
+                   <h:inputText id="txtEMail" size="50"  value=""/>
+                telefone   
+                 <h:inputText id="txttelefone" size="50"  value=""/>
+                <h3> Endereço</h3>
+                   Logradouro
+                   <h:inputSecret id="txtLogradouro" size="15" value="" />
+
+                   Bairro
+                   <h:inputSecret id="txtBairro" size="15" value="" />
+                   
+                   Número
+                 <h:inputSecret id="txtNumero" size="15" value="" />
+                  CEP
+                 <h:inputSecret id="txtCEP" size="15" value="" />
+                  Complemento
+                 <h:inputSecret id="txtCompleneto" size="15" value="" />
+                 
+                 <h2> Dados do Animal</h2>   
+                 
+                 
+
+               <h:commandButton value="Salvar"/>
+
+        
+    </ui:define>
+
+</ui:composition>
